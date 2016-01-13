@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Persons" representedClassName="Persons" syncable="YES">
+        <attribute name="dateEntered" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="personAddressState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personAddressStreet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personAddressZip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personRole" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personSkypeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personTwitterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationshipPersonPhoneNumbers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PhoneNumbers" inverseName="relationshipPhoneNumberPerson" inverseEntity="PhoneNumbers" syncable="YES"/>
+    </entity>
+    <entity name="PhoneNumbers" representedClassName="PhoneNumbers" syncable="YES">
+        <attribute name="phoneNumer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationshipPhoneNumberPerson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Persons" inverseName="relationshipPersonPhoneNumbers" inverseEntity="Persons" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Persons" positionX="-153" positionY="-18" width="128" height="238"/>
+        <element name="PhoneNumbers" positionX="88" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
